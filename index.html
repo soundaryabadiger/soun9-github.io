@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+
+/* (A) FULLSCREEN COVER */
+body 
+{ 
+    padding: 0; 
+    margin: 0; 
+ 
+
+
+
+
+}
+.container { min-height: 100vh; }
+.front { overflow: auto; }
+
+/* (B) LAYERING */
+.container { position: relative; }
+.back, .front {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.back { z-index: 1; }
+.front { z-index: 2; }
+
+/* (C) BLURRED BACKGROUND IMAGE */
+.back {
+  background: url(virat.jpg);
+  background-size: cover;
+  filter: blur(5px);
+}
+
+
+/* ENTIRE PAGE */
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* FRONT CONTENT */
+.front {
+  display: flex; text-align: center;
+  align-items: center; justify-content: center;
+}
+
+/* FOOTER */
+#code-boxx {
+  padding: 20px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+#code-boxx h2 { margin-bottom: 50px; }
+#code-boxx a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
+  color: #fff;
+}
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- (A) BACKGROUND IMAGE -->
+            <div class="back"></div>
+            
+            <!-- (B) FOREGROUND CONTENT -->
+            <div class="front">
+              <!-- (X) VISIT CODE-BOXX -->
+              <div id="code-boxx">
+                <h2>SIMPLE BACKGROUND BLUR WITH CSS</h2>
+                Visit
+                <a href="https://code-boxx.com/blurred-text-images-html-css/"
+                   target="_blank">
+                  Code Boxx
+                </a> for more details.
+              </div>
+            </div>
+          </div>
+
+
+    </body>
+
+</html>
